@@ -1,0 +1,331 @@
+.main {
+    background-color: #1A1A1A;
+    min-height: 100vh;
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 25% 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar-container ul li a {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.navbar-container ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(244, 167, 72, 1);
+    transition: width 0.4s ease;
+}
+
+.navbar-container ul li a:hover {
+    color: rgba(244, 167, 72, 1);
+    opacity: 1;
+}
+
+.navbar-container ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar-logo {
+    height: 40px;
+    position: relative;
+    left: 10px;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding-top: 40px;
+}
+
+.header-title {
+    font-family: "Italiana", serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 1.2;
+    color: white;
+    padding-top: 60px;
+}
+.header .container{
+    padding-top: 100px;
+}
+
+.orange-text {
+    color: rgba(244, 167, 72, 1);
+    font-style: italic;
+}
+
+.header-subtitle {
+    font-family: "Inter", sans-serif;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 13px;
+    margin: 25px 0 40px;
+    text-transform: uppercase;
+}
+
+.header-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-shop {
+    background-color: rgba(244, 167, 72, 1);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+}
+
+.btn-shop:hover {
+    background-color: white;
+    color:rgba(244, 167, 72, 1) ;
+   
+}
+
+.btn-cta {
+    background: rgba(244, 167, 72, 1);
+    border: 1px solid #444;
+    color: black;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-cta:hover{
+    background-color: white;
+    color:rgba(244, 167, 72, 1) ;
+}
+
+.video-section {
+    position: relative;
+    z-index: 5;
+    top: 280px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-wrapper-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.orange-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 1050px;
+    background: radial-gradient(circle, rgba(244, 167, 72, 0.4) 0%, transparent 70%); 
+    filter: blur(80px); 
+    z-index: -1; 
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 1200px; 
+    height: 550px;
+    border-radius: 40px;
+    overflow: hidden;
+    border: 1px solid rgba(244, 167, 72, 0.2); 
+    position: relative;
+    cursor: pointer;
+    background-color: #000;
+    z-index: 2;
+}
+
+.main-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(244, 167, 72, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 18px solid rgba(244, 167, 72, 1);
+    margin-left: 6px;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding-top: clamp(60px, 10vh, 120px); 
+}
+
+.header-title {
+    font-family: "Italiana", serif;
+    font-weight: 400;
+    font-size: clamp(40px, 7vw, 100px); 
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.video-section {
+    position: relative;
+    z-index: 5;
+    margin-top: clamp(40px, 8vw, 100px); 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 1200px; 
+    height: clamp(250px, 45vw, 550px);
+    border-radius: clamp(15px, 4vw, 40px);
+    overflow: hidden;
+    border: 1px solid rgba(244, 167, 72, 0.2); 
+    position: relative;
+    margin: 0 15px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .navbar-container ul {
+        gap: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; 
+        position: sticky;
+        gap: 15px;
+    }
+    
+    .navbar-container ul {
+        gap: 12px;
+    }
+
+    .navbar-container ul li a {
+        font-size: 10px;
+    }
+
+    .header-btns {
+        flex-direction: column; 
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn-shop, .btn-cta {
+        width: 100%;
+        max-width: 280px; 
+    }
+    .navbar{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 38px; 
+    }
+
+    .header-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin: 15px 0 30px;
+    }
+
+    .video-wrapper {
+        height: 200px; 
+    }
+
+    .play-button {
+        width: 50px;
+        height: 50px;
+    }
+}
